@@ -1,0 +1,91 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="MainActivity">
+
+    <EditText
+        android:id="@+id/searchField"
+        style="@style/Base.Animation.AppCompat.Dialog"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="Введите слово"
+        android:imeOptions="actionSearch"
+        android:inputType="textVisiblePassword"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="339dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintTop_toBottomOf="@+id/lookupButton"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/displayField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchField"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="70sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.088"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lookupButton"
+            app:layout_constraintVertical_bias="0.005" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/lookupButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="125dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="lookup"
+        android:text="Найти в словаре"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchField" />
+
+    <Button
+        android:id="@+id/hskInfoButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="70dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@android:drawable/ic_input_get"
+        android:onClick="hskInfo"
+        app:layout_constraintBottom_toBottomOf="@+id/lookupButton"
+        app:layout_constraintStart_toEndOf="@+id/lookupButton"
+        app:layout_constraintTop_toTopOf="@+id/lookupButton" />
+
+</android.support.constraint.ConstraintLayout>
