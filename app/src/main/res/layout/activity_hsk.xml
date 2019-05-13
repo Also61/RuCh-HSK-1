@@ -3,7 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Hsk">
+    android:layout_height="wrap_content"
+    tools:context=".Hsk"
+    android:scrollbars="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="398dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="-3dp" />
+
+            <TextView
+                android:id="@+id/recipeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Дополнительная Информация"
+                android:textSize="25sp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
