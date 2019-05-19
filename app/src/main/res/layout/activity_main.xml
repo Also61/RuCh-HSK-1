@@ -1,5 +1,4 @@
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,6 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="339dp"
         android:layout_marginTop="88dp"
@@ -61,31 +61,37 @@
     <Button
         android:id="@+id/lookupButton"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="125dp"
-        android:layout_height="70dp"
+        android:layout_width="88dp"
+        android:layout_height="74dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/search_word_icon"
         android:onClick="lookup"
-        android:text="Найти в словаре"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchField" />
 
     <Button
         android:id="@+id/hskInfoButton"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="70dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:background="@android:drawable/ic_input_get"
+        android:layout_width="88dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/hskinfo_icon"
         android:onClick="hskInfo"
-        app:layout_constraintBottom_toBottomOf="@+id/lookupButton"
+        app:layout_constraintStart_toEndOf="@+id/dictionaryBaseButton"
+        app:layout_constraintTop_toTopOf="@+id/dictionaryBaseButton" />
+
+    <Button
+        android:id="@+id/dictionaryBaseButton"
+        android:layout_width="86dp"
+        android:layout_height="76dp"
+        android:background="@drawable/hsk1_words_icon"
         app:layout_constraintStart_toEndOf="@+id/lookupButton"
-        app:layout_constraintTop_toTopOf="@+id/lookupButton" />
+        app:layout_constraintTop_toBottomOf="@+id/searchField" />
 
 </android.support.constraint.ConstraintLayout>

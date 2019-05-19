@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Hsk"></activity>
+        <activity
+            android:name=".DictionaryBase"
+            android:label="@string/title_activity_dictionary_base"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Hsk" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

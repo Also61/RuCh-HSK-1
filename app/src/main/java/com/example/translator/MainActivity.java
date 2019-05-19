@@ -32,10 +32,11 @@ public class MainActivity extends AppCompatActivity {
         //Инициализация элементов интерфейса
         searchField = (EditText) findViewById(R.id.searchField);
         displayField = (TextView) findViewById(R.id.displayField);
-        Button button = (Button)findViewById(R.id.lookupButton);
+        Button searchButton = (Button)findViewById(R.id.lookupButton);
         Button hsk = (Button)findViewById(R.id.hskInfoButton);
+        Button hskWordsButton = (Button)findViewById(R.id.dictionaryBaseButton);
         //Вызов метода который ищет перевод слова в коллекции
-        button.setOnClickListener(new View.OnClickListener(){
+        searchButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
                 /*Вызов статического метода,который заполняет коллекцию dictionary */
                 Dictionary.getDictionary(dictionary);
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
         hsk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +62,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        hskWordsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DictionaryBase.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

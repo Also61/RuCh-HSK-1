@@ -3,7 +3,6 @@ package com.example.translator;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class Dictionary {
 //Метод заполняющий коллекцию dictionary
     public static void getDictionary(Map<String, String> dictionary) {
